@@ -172,6 +172,12 @@ to open a chat with the LLM.
 
 Ask a physics or astronomy based query to get an accurate response. Note HyDE decomposition is used for better semantic comparison in cosine similarity, to two Claude API calls occur in 1 query. 
 
+![model_ex](assets/model_ex.png)
+
+Then a response will be generated using the provided context, with an addendum at the end where the model uses the context to add additional information from its training data. Whenever information is provided that is not sourced from the context, the model explicitly states so. This is a feature added for my own benefit, and its advantages have not been tested in depth.
+
+![model_gif](assets/model_gif.gif)
+
 Use the `More Context` button to have the pipeline retrieve additional context should you ask a follow-up question that would not be covered by the knowledge the AI recalled. NOTE THE PIPELINE DOES NOT CHECK FOR THIS AUTOMATICALLY. It is on the users own volition whether or not to add additional context.
 
 ## Troubleshooting
@@ -188,12 +194,13 @@ Persistent errors or issues in information recall should be sent to the project 
 
 As this project was used to give me more insight to AI use and get more familiar with the machine learning landscape, more advanced features were moved to later versions when I have better hardware and an overall better grasp at the scale of the project. The considered improvements are included below:
 
-- [personal] Generating parsed documents using various parsers that excel in different fields (MiNerU for general text, NOUGAT for equations/tables)
+- (personal) Generating parsed documents using various parsers that excel in different fields (MiNerU for general text, NOUGAT for equations/tables)
 - Summarizing equation meaning in each text such that the descriptions are better picked up by the cosine similarity, and using the linked chunks feature so the actual equation is passed to the LLM. (do similarly for tables)
 - Using query decomposition to generate individual results for multiple-part questions
 - Testing a late chunking method, involving adding a blurb to each chunk before embedding for better context
     - This method is also complemented by having an LLM explicitly highlight the title/authors/sections as the entire article is passed through it, allowing for more accurate labelling
 - Testing a Graph RAG (involving restructuring the chunking algorithm) to determine if its more effective for this role
+- Make the layer more user friendly with a setup doc to prompt for files, and tie the .pkl files to relative location
 
 ## Acknowledgments
 I'd like to acknowledge that claude code was used to assist the development of the pipeline, to confirm that I was on the right track through development and assisting in coding at points. 
