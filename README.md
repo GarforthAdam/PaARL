@@ -50,14 +50,14 @@ The requirements for running this program in it's current claude dependance is a
     - The chunking file is currently designed to accurately chunk META's NOUGAT parsed files, which uses standard .mmd notation, where headers/titles are signified by the "#" symbol. Files not adhering to this might run into citation issues from the LLM.
     -Additionally, the following python modules must be installed:
 
-        - streamlit 'pip install streamlit'
-        - ollama 'pip install ollama'
+        - `streamlit`: 'pip install streamlit'
+        - `ollama`: 'pip install ollama'
          -additionally, the phi:3 and Llama-3.2-1B-Instruct-GGUF are utilized.
          - phi:3 is obtainable through the command `ollama pull phi:3`
          - llama-3.2 is obtainible through `ollama pull hf.co/bartowski/Llama-3.2-1B-Instruct-GGUF`
-        - transformers/sentence_trasformers `pip install huggingface`
-        - datasets `pip install datasets`
-        - torch.utils.data `pip install torch`
+        - `transformers/sentence_trasformers`: `pip install huggingface`
+        - `datasets`: `pip install datasets`
+        - `torch.utils.data`: `pip install torch`
 
 This pipeline was created with the following computer specs:
 - AMD Ryzen 7 5800H with Radeon Graphics
@@ -158,11 +158,11 @@ This includes the full positives and negatives from the field-specific bounds, a
 ## WARNING: 
 This pipeline was primarily created for my own use, not as a product for the general public. As such, there may be a few points where, should one want to use this for themselves, they will have to go through the code and change a few lines to fit their own computer. When this is necassary I will do my best to point a user to the location in the files where these changes are needed. 
 
-In [chunking.py], line 253/257, ensure your directories are correctly pointing to a folder including your parsed pdfs.
+In `chunking.py`, line 253/257, ensure your directories are correctly pointing to a folder including your parsed pdfs.
 
-In [definitions.py], ensure your files are readily available and pointed in the correct directory.
+In `definitions.py`, ensure your files are readily available and pointed in the correct directory.
 
-[Abstracts.py], [model_test.py], [RAG_model_test.py] and [Reranker.py] are not needed for the programs function, but are included in `\program_eval` to give insight as to how the various steps of the RAG were evaluated.
+`Abstracts.py`, `model_test.py`, `RAG_model_test.py` and `Reranker.py` are not needed for the programs function, but are included in `\program_eval` to give insight as to how the various steps of the RAG were evaluated.
 
 As this RAG utilizes streamlit, us the command
 
@@ -172,11 +172,11 @@ to open a chat with the LLM.
 
 Ask a physics or astronomy based query to get an accurate response. Note HyDE decomposition is used for better semantic comparison in cosine similarity, to two Claude API calls occur in 1 query. 
 
-![model_ex](assets/model_ex.png)
+![app_image](assets/model_ex.png)
 
 Then a response will be generated using the provided context, with an addendum at the end where the model uses the context to add additional information from its training data. Whenever information is provided that is not sourced from the context, the model explicitly states so. This is a feature added for my own benefit, and its advantages have not been tested in depth.
 
-![model_gif](assets/model_gif.gif)
+![app_gif](assets/model_gif.gif)
 
 Use the `More Context` button to have the pipeline retrieve additional context should you ask a follow-up question that would not be covered by the knowledge the AI recalled. NOTE THE PIPELINE DOES NOT CHECK FOR THIS AUTOMATICALLY. It is on the users own volition whether or not to add additional context.
 
