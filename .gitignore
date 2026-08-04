@@ -216,3 +216,15 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# Data and Vector DBs
+*.pdf
+*.mmd
+*.pkl
+*.sqlite3
+/data/
+/vector_store/
