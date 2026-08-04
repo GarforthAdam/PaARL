@@ -82,7 +82,7 @@ Install from repository:
 Reranker models also must be installed from the hugging face hub:
 
 `pip install -U huggingface_hub`
-`hf download yourusername/astro-rag-reranker --local-dir Reranker_models/V3_clean`
+`hf download AGarforth/astro-rag-reranker --local-dir Reranker_models/V3_clean`
 
 Past versions (V1_clean/V2_clean) can be installed by replacing "V3" in the local directory with the respective model name.
 
@@ -149,7 +149,7 @@ BUG FIX: A data structuring bug was discovered in the V3 training pipeline where
 
 Further analysis will have to be done to understand why the RRF scored so well in this case. A quick spearman correlation and measurement of the std for a test set revealed that the bugged V3 found materially different chunks compared to the base similarity score; this inadvertently gave a higher spread of chunks to the LLM. It is hypothesized then that the LLM was able to accurately make connections using this wider range of information, producing factually correct information. This reranker has not yet been run through the blind grading procedure, but can be passed through the program using:
 
-`hf download AdamGarforth/astro-rag-reranker --local-dir Reranker_models/V3_clean_FIX`
+`hf download AGarforth/astro-rag-reranker --local-dir Reranker_models/V3_clean_FIX`
 
 This includes the full positives and negatives from the field-specific bounds, as well as higher weights for named objects (ex. M15 vs. M71)
 
