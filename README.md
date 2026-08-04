@@ -164,6 +164,8 @@ In `definitions.py`, ensure your files are readily available and pointed in the 
 
 `Abstracts.py`, `model_test.py`, `RAG_model_test.py` and `Reranker.py` are not needed for the programs function, but are included in `\program_eval` to give insight as to how the various steps of the RAG were evaluated.
 
+Run the programs in the following order: `chunking.py` -> `RAG.py` -> `RAG_v1.py`
+
 As this RAG utilizes streamlit, us the command
 
 `streamlit run RAG_v1.py [ARGUMENTS]`
