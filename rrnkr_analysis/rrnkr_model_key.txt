@@ -1,0 +1,154 @@
+QUERY: How can Bayesian deep learning models be used to characterize exoplanet atmospheres?
+Order: ['nothing', 'v1', 'v3']
+
+QUERY: How is Bayesian statistics applied to scientific fields? 
+Order: ['nothing', 'v3', 'v1']
+
+QUERY: What is a core component of type 1a supernovae that differentiates it from other types?
+Order: ['v1', 'v3', 'nothing']
+
+QUERY: What are some core properties of superconductors? How are they best used?
+Order: ['v3', 'v1', 'nothing']
+
+QUERY: How does the temperature of a superconductor impact its performance? 
+Order: ['v1', 'nothing', 'v3']
+
+QUERY: How would particle scattering of ejected material impact the data collected for a supernova? Do the different types impact this conclusion?
+Order: ['v1', 'v3', 'nothing']
+
+QUERY: How are quantum field properties of particle scattering applied to astrophysical phenomena? What is the mathematical context in which it could be applied?
+Order: ['v3', 'v1', 'nothing']
+
+QUERY: In what ways could Bayesian predictive modelling be applied to internal Globular Cluster dynamics?
+Order: ['v3', 'nothing', 'v1']
+
+QUERY: What are the typical methods of exoplanet detection? How are they measured? 
+Order: ['nothing', 'v3', 'v1']
+
+QUERY: How are spin properties relevant to an s-wave superconductor, and in what ways can their presence be proven?
+Order: ['v3', 'nothing', 'v1']
+
+QUERY: How are quantum field properties of particle scattering applied to astrophysical phenomena? What is the mathematical context in which it could be applied? 
+Order: ['v3', 'nothing', 'v1']
+
+QUERY: What combination of chemical abundances in exoplanet atmospheres would provide suitable conditions to generate clouds from ammonia?
+Order: ['nothing', 'v3', 'v1']
+
+QUERY: Why is the high frequency ramp up signal such a significant feature of GW emission for core-collapse supernovae?
+Order: ['v1', 'nothing', 'v3']
+
+QUERY: How is the Hilbert space used in physics? 
+Order: ['v1', 'v3', 'nothing']
+
+QUERY: In what ways is Quantum Electrodynamics used to model particle scattering and how is this applicable to superconductors? 
+Order: ['v3', 'v1', 'nothing']
+
+QUERY: How are Feynman diagrams used to illustrate quantum effects?
+Order: ['v1', 'v3', 'nothing']
+
+QUERY: If I wanted to use an LLM and Bayesian deep learning to streamline the traversal of exoplanet databases and better observe them, where would I start, and what would I have to account for?
+Order: ['nothing', 'v3', 'v1']
+
+QUERY: What is the purpose of the Bogoliubov-de Gennes equations when it comes to modelling ferromagnetic superconductors? Are there any other equations that serve a similar purpose?
+Order: ['nothing', 'v3', 'v1']
+
+QUERY: What methods are commonly used to model electromagnetic fields?
+Order: ['nothing', 'v3', 'v1']
+
+QUERY: Do the methods used to model electromagnetic fields differ significantly from those used to individually model electric and magnetic fields? In what scenarios is modelling these individual fields more important than the combined field?
+Order: ['v3', 'nothing', 'v1']
+
+QUERY: Is there a possibility of exoplanets being present within large globular clusters? What properties of globular clusters makes them difficult to find?
+Order: ['v3', 'v1', 'nothing']
+
+QUERY: Are supernova remnants a good indicator of age in a globular cluster?
+Order: ['nothing', 'v3', 'v1']
+
+QUERY: To the best of your ability, answer this question: how could a Boris Particle Pusher algorithm incorporate Bayesian error analysis/Bayesian deep learning? 
+Order: ['nothing', 'v1', 'v3']
+
+QUERY: Is there any precedent for an abundance of blue stragglers to be important in cluster evolution? If so, why? If not, why not? 
+Order: ['v1', 'v3', 'nothing']
+
+QUERY: How can I use Bayesian error analysis to approximate the error of binary mergers within a globular cluster?
+Order: ['nothing', 'v1', 'v3']
+
+QUERY: In what ways could particle spin be relevant in the evolution of a star? What mathematical models could be used to determine this? 
+Order: ['nothing', 'v3', 'v1']
+
+QUERY: How does the M31 cluster differ from the Virgo cluster? What are the possible explanations for these differences? 
+Order: ['nothing', 'v1', 'v3']
+
+QUERY: How do superconductors behave near magnetic interfaces? 
+Order: ['v3', 'nothing', 'v1']
+
+QUERY: What methods exist for detecting and characterizing exoplanet atmospheres? (
+Order: ['v1', 'nothing', 'v3']
+
+QUERY: How do globular clusters trace the formation history of their host galaxies?
+Order: ['v1', 'v3', 'nothing']
+
+QUERY: What are the main differences between types of supernovae? 
+Order: ['v1', 'nothing', 'v3']
+
+QUERY: How is uncertainty quantified in modern machine learning models?
+Order: ['v1', 'v3', 'nothing']
+
+QUERY: What detector technologies are used in high energy particle physics experiments?
+Order: ['v1', 'v3', 'nothing']
+
+QUERY: How do electromagnetic fields accelerate charged particles?
+Order: ['nothing', 'v3', 'v1']
+
+QUERY: What role does Bayesian statistics play in astrophysical data analysis?
+Order: ['v3', 'v1', 'nothing']
+
+QUERY: What numerical values were measured for neutron-proton, neutron-deuteron and neutron-³He scattering amplitudes using neutron interferometry, and how do they compare to theoretical predictions? 
+Order: ['v3', 'v1', 'nothing']
+
+QUERY: At what galactocentric distance does counter-rotation emerge in the globular cluster system of M104, and what observational evidence supports this?
+Order: ['v1', 'v3', 'nothing']
+
+QUERY: What specific photometric and color properties in ultraviolet and optical wavelengths distinguish super-Chandrasekhar mass Type Ia supernovae like SN 2009dc from normal Type Ia events
+Order: ['v3', 'nothing', 'v1']
+
+QUERY: What are the three Bayesian inference methods compared in the quantized BNN compression analysis, and how does bit-width reduction affect their uncertainty calibration?
+Order: ['v3', 'nothing', 'v1']
+
+QUERY: How does the Diemand-Moore technique constrain the formation redshift and halo mass of metal-poor globular clusters in a Virgo-like cluster environment?
+Order: ['v1', 'nothing', 'v3']
+
+QUERY: What ergodicity conditions are established for the MAdaSub MCMC algorithm, and under what parameter choices are they guaranteed to hold?
+Order: ['nothing', 'v1', 'v3']
+
+QUERY: What conditions on the NLE Lagrangian determine whether a nonlinear electromagnetic theory admits nontrivial stealth field configurations, and which specific models satisfy or violate these conditions?
+Order: ['nothing', 'v3', 'v1']
+
+QUERY: What are the angle-dependent spontaneous surface current distributions predicted for chiral p-wave superconductors near an SN interface, and what symmetry breaking mechanism generates them?
+Order: ['v1', 'nothing', 'v3']
+
+QUERY: What 1PR tadpole diagram contributions to the charged particle propagator in constant electromagnetic fields were previously believed to vanish, and what algebraic construction reveals their finite contributions? 
+Order: ['v3', 'nothing', 'v1']
+
+QUERY: How can Bayesian deep learning uncertainty quantification methods improve the reliability of atmospheric retrieval frameworks for characterizing transiting exoplanet spectra? 
+Order: ['v3', 'v1', 'nothing']
+
+QUERY: What connections exist between T-matrix formalisms used to characterize skyrmion-induced Andreev bound states in proximity-coupled superconductors and scattering phase function methods used in exoplanet transit radiative transfer models? 
+Order: ['nothing', 'v1', 'v3']
+
+QUERY: How do reionization epoch constraints derived from metal-poor globular cluster formation theory in Virgo-like environments relate to predictions of the diffuse supernova neutrino background flux?
+Order: ['v3', 'nothing', 'v1']
+
+QUERY: Answer to the best of your ability: What are some possible explanations to exoplanet type objects orbiting objects that would not normally allow the typical planet formation process, such as Millisecond Pulsars? (
+Order: ['nothing', 'v1', 'v3']
+
+QUERY: How can tensor based matrices be applied to supernova analysis? If the context leans more toward one part of the question than the other, fill in the information with your own knowledge. 
+Order: ['v1', 'v3', 'nothing']
+
+QUERY: What are some limitations in using bayesian error analysis on real targets? How can you be certain that the error distribution produced is accurate to the physical object? (
+Order: ['v3', 'v1', 'nothing']
+
+QUERY: What are some potential ways a boris pusher algorithm can be used to simulate astrophysical objects?
+Order: ['v3', 'nothing', 'v1']
+
+
