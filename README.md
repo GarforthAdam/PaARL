@@ -23,15 +23,15 @@ A specialized reranker was fine tuned and evaluated using 50 questions designed 
 
 ## Content
 1. [Installation/Setup](#installation/setup)
-    *[Prerequisites](#prerequisites)
+    * [Prerequisites](#prerequisites)
 2. [Chunking Algorithm](#getting-started)
-   [Rerankers used](#prerequisites)
+3. [Rerankers used](#prerequisites)
     * [Evaluation metrics](#evaluation-metrics)
-3. [Usage](#usage)
-4. [Troubleshooting](#troubleshooting)
-5. [Planned Improvements](#planned-improvements)
-6. [Acknowledgements](#acknowledgments)
-7. [License](#license)
+4. [Usage](#usage)
+5. [Troubleshooting](#troubleshooting)
+6. [Planned Improvements](#planned-improvements)
+7. [Acknowledgements](#acknowledgments)
+8. [License](#license)
 
 ## Installation/Setup
 
