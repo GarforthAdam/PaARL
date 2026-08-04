@@ -1,6 +1,6 @@
 # PHYSICS AND ASTRONOMY RAG LAYER
 
-This is a Physics and Astronomy RAG Layer (PaARL), custom built to accurately parse, retrive and synthesize dense physics and astronomy literature using a fine-tuned reranker, specialized chunking algorithms, and HyDE retrieval. Provides accurate sources, sections and equations when referencing relevant media. It is compatible with all LLMs, though was designed with Anthropics Claude in mind.
+This is a Physics and Astronomy RAG Layer (PaARL), custom built to accurately parse, retrieve and synthesize dense physics and astronomy literature using a fine-tuned reranker, specialized chunking algorithms, and HyDE retrieval. Provides accurate sources, sections and equations when referencing relevant media. It is compatible with all LLMs, though was designed with Anthropics Claude in mind.
 
  Provides in depth analysis and discussion of topics related to and including: 
  - Stellar remnants, 
@@ -14,7 +14,7 @@ This is a Physics and Astronomy RAG Layer (PaARL), custom built to accurately pa
  - Superconductors
 
 
-As this project served as a method to better understand the process behind LLM information recall and it's known limitations, a specialized chunking algorithm was constructed in leiu of Langchain.
+As this project served as a method to better understand the process behind LLM information recall and its known limitations, a specialized chunking algorithm was constructed in lieu of Langchain.
 
 A specialized reranker was fine tuned and evaluated using 50 questions designed to test the information ranking of the model.
 
@@ -41,7 +41,7 @@ Additionally, it is recommended to reconfigure WSL memory to include at least 7 
 The paper corpus and vector database are not included, as arXiv's default license doesn't grant redistribution rights for most papers — build your own corpus per the instructions below.
 
 ### Prerequisites
-The requirements for running this program in it's current claude dependance is as follows:
+The requirements for running this program in its current claude dependance is as follows:
 - A claude developers account, including an API key that is currently active (at the start of each session, input `export ANTHROPIC_API_KEY= [YOUR_KEY_HERE]`)
 - Anthropics Client installed with the command
 `pip install Anthropic`
@@ -54,8 +54,8 @@ The requirements for running this program in it's current claude dependance is a
         - `ollama`: 'pip install ollama'
          -additionally, the phi:3 and Llama-3.2-1B-Instruct-GGUF are utilized.
          - phi:3 is obtainable through the command `ollama pull phi:3`
-         - llama-3.2 is obtainible through `ollama pull hf.co/bartowski/Llama-3.2-1B-Instruct-GGUF`
-        - `transformers/sentence_trasformers`: `pip install huggingface`
+         - llama-3.2 is obtainable through `ollama pull hf.co/bartowski/Llama-3.2-1B-Instruct-GGUF`
+        - `transformers/sentence_transformers`: `pip install huggingface`
         - `datasets`: `pip install datasets`
         - `torch.utils.data`: `pip install torch`
 
@@ -76,8 +76,8 @@ Later versions of this pipeline will aim to be as locally ran as possible, and a
 
 Install from repository:
 
-'git clone https://github.com/GarforthAdam/PaARL'
-'cd PaARL'
+`git clone https://github.com/GarforthAdam/PaARL`
+`cd PaARL`
 
 Reranker models also must be installed from the hugging face hub:
 
@@ -106,7 +106,7 @@ The HuggingFace model "ms-marco-MiniLM-L-6-v2" was finetuned to better rank a ph
 
 To create the training set, the abstracts of every paper that includes one is passed through a Claude model to create 5 academic questions that can be answered by only that article. Hard positive and soft negative lists are created through heuristics relative to the base similarity score of chunks and whether the chunk originates from the article itself. Questions have similarity scores produced for each chunk, where the top 20 are saved into sets depending on general heuristics.
 
-Chunks with a high sim score but from a different article (higher than 0.80 sim score), or chunks with a low sim score (less than 0.80 sim score) from the same article are saved to an ambiguous list, that is then saved for manual review. A triplet setup is utilized of [(question), (positive chunk), (negative chunk)], where positive chunks are given a value of 1.0 and negatives 0.0. No variation of these weights is used in this pipeline as it was deemed unecessary for these purposes.
+Chunks with a high sim score but from a different article (higher than 0.80 sim score), or chunks with a low sim score (less than 0.80 sim score) from the same article are saved to an ambiguous list, that is then saved for manual review. A triplet setup is utilized of [(question), (positive chunk), (negative chunk)], where positive chunks are given a value of 1.0 and negatives 0.0. No variation of these weights is used in this pipeline as it was deemed unnecessary for these purposes.
 
 The question sets are shuffled and 130 (%10 of papers with abstracts) questions are taken to test the model. The rest are used to train the model. 47 questions in the testing set and 43 in the training set have the top twenty ambiguous chunks manually reviewed to sort into the positive or negative sections. While this could be attributed to noise in the training set, it's best use was giving a sense as to how specific semantics in different article genres led to varying sim scores. Thus, for V3, new sim boundaries are introduced for different article genres (a low powered LLM sorts them by genre, as this was not saved during article parsing). 
 
@@ -156,19 +156,21 @@ This includes the full positives and negatives from the field-specific bounds, a
 ## Usage
 
 ## WARNING: 
-This pipeline was primarily created for my own use, not as a product for the general public. As such, there may be a few points where, should one want to use this for themselves, they will have to go through the code and change a few lines to fit their own computer. When this is necassary I will do my best to point a user to the location in the files where these changes are needed. 
+This pipeline was primarily created for my own use, not as a product for the general public. As such, there may be a few points where, should one want to use this for themselves, they will have to go through the code and change a few lines to fit their own computer. When this is necessary I will do my best to point a user to the location in the files where these changes are needed. 
 
 In `chunking.py`, line 253/257, ensure your directories are correctly pointing to a folder including your parsed pdfs.
 
 In `definitions.py`, ensure your files are readily available and pointed in the correct directory.
 
+Search the code for [path_to] and replace it with your own absolute paths. Also search for [path_to_parsed_files].
+
 `Abstracts.py`, `model_test.py`, `RAG_model_test.py` and `Reranker.py` are not needed for the programs function, but are included in `\program_eval` to give insight as to how the various steps of the RAG were evaluated.
 
 Run the programs in the following order: `chunking.py` -> `RAG.py` -> `RAG_v1.py`
 
-As this RAG utilizes streamlit, us the command
+As this RAG utilizes streamlit, use the command
 
-`streamlit run RAG_v1.py [ARGUMENTS]`
+`streamlit run RAG_v1.py`
 
 to open a chat with the LLM.
 
@@ -184,7 +186,7 @@ Use the `More Context` button to have the pipeline retrieve additional context s
 
 ## Troubleshooting
 
-The only known error would come from poor chunking due to poor parsing - most likely an occurence from the parser not using #'s to denote new sections. Some articles are also formatted such that the title and authors appear past the abstract, which can also cause parsing issues. These are only improved by unfortunately rerunning the document parsing on saved pdfs.
+The only known error would come from poor chunking due to poor parsing - most likely an occurrence from the parser not using #'s to denote new sections. Some articles are also formatted such that the title and authors appear past the abstract, which can also cause parsing issues. These are only improved by unfortunately rerunning the document parsing on saved pdfs.
 
 Occasionally the LLM may reference [MISSING_PAGE_FAIL:N] or potential AUTHOR - which are also parsing errors, and can be resolved by rerunning the document parser. 
 
